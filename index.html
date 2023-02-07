@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My First Website</title>
-    <style>
-      body {
-        background-color: lightgray;
-        font-family: Arial, sans-serif;
-      }
-      h1 {
-        text-align: center;
-        color: blue;
-      }
-      p {
-        padding: 20px;
-        text-align: justify;
-      }
-    </style>
+    <title>My WebAR Website</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>This is my first website.</p>
+    <button id="startCamera">Start Camera</button>
+    <video id="videoElement"></video>
+  
+    <script>
+      const videoElement = document.getElementById("videoElement");
+      const startCameraButton = document.getElementById("startCamera");
+  
+      startCameraButton.addEventListener("click", async () => {
+        const constraints = {
+          video: { facingMode: "user" },
+          audio: false
+        };
+  
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia(constraints);
+          videoElement.srcObject = stream;
+          videoElement.play();
+        } catch (error) {
+          console.error("Error accessing camera", error);
+        }
+      });
+    </script>
   </body>
 </html>
