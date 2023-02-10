@@ -1,131 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Red Media Digital Archive</title>
-  <style>
-  @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
-    /* Add some styles for the modern design */
-    .parallax {
-        /* background-image: url("https://i.imgur.com/zuZaH7P.png"); */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    h1 {
-        position: fixed;
-        top: 20px;
-        left: 30px;
-        font-size: 50px;
-        font-weight: bold;
-        animation: rotating 6s linear infinite;
-    }
-    body{ 
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        background: #131313;
-        color: #fff;
-        font-size: 96px;
-        font-family: 'Fira Mono', monospace;
-        letter-spacing: -7px;
-    } 
-
-    @-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -webkit-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes rotating {
-  from {
-    -ms-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -ms-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-.rotating {
-  -webkit-animation: rotating 6s linear infinite;
-  -moz-animation: rotating 6s linear infinite;
-  -ms-animation: rotating 6s linear infinite;
-  -o-animation: rotating 6s linear infinite;
-  animation: rotating 6s linear infinite;
-}
-    select {
-      font-size: 16px;
-      padding: 10px;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .artist-info {
-      margin-top: 50px;
-      text-align: center;
-      width: 100%;
-    }
-    .artist-info img {
-      width: 200px;
-      display: inline-block;
-      margin-right: 20px;
-    }
-    .artist-info h2 {
-      font-size: 24px;
-      margin-top: 20px;
-    }
-    .artist-info p {
-      font-size: 16px;
-      margin-top: 20px;
-    }
-    .ar-button {
-      display: block;
-      margin-top: 50px;
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #333;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Red Media+</title>
 </head>
-<h1 class="rotating">Red Media+</h1>
 <body>
-    <div class="parallax">
-    <header>
-        <nav>
-          <ul id="page-select">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#artists">Artists</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section id="home">
-        </section>
-        <section id="artists">
-        </section>
-        <section id="about">
-        </section>
-      </main>
-    <!-- Add more .artist-info divs as needed -->
-</body
+  <div class="header">
+    <h1>Red Media+</h1>
+  </div>
+
+
+  <!-- <div>
+    <a rel="ar" href="AR_Demo00.usdz">
+        <button class="ar-model-button">View AR Model</button>
+    </a>
+</div> -->
+
+
+<!-- <div id="subscription-popup">
+  <form>
+    <label for="email">Subscribe to our mailing list:</label>
+    <input type="email" id="email" name="email" required>
+    <input type="submit" value="Subscribe">
+  </form>
+</div> -->
+
+<main>
+    <button class="accordion">About</button>
+    <div class="panel">
+      <p>About section content goes here</p>
+    </div>
+    <button class="accordion">Creatives</button>
+    <div class="panel">
+      <p>Creatives section content goes here</p>
+    </div>   
+    <button class="accordion">Archive</button>
+    <div class="panel">
+      <p>Archive section content goes here</p>
+    </div>       
+  </main>  
+  <iframe src="https://donyegreen.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+  <script src="app.js"></script>
+</body>
+</html>
