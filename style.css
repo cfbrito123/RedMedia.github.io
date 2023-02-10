@@ -53,8 +53,33 @@ main {
 @media only screen and (max-width: 768px) {
   body {
     font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    height: 50px;
+  }
+  
+  .header h1 {
+    font-size: 30px;
+  }
+  
+  main {
+    width: 90%;
+    height: auto;
+  }
+  
+  .ar-model-button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .accordion {
+    font-size: 20px;
   }
 }
+
 
 .ar-model-button {
   background-color: #BE1E2D;
