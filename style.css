@@ -51,8 +51,10 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
-
 
 .ar-model-button {
   background-color: #BE1E2D;
